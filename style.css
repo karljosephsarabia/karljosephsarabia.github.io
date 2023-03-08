@@ -202,3 +202,17 @@
         padding: 11vh 0;
     }
 }
+
+@media screen and (min-width: 1200px) {
+    .main-color-content {
+        padding: 13.5vh 0;
+    }
+
+    .navbar-gap {
+        gap: 7rem;
+    }
+
+    .about-content-width {
+        width: 30rem;
+    }
+}
