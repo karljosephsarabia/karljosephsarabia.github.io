@@ -5,7 +5,12 @@
     font-family: 'League Spartan', sans-serif;
     color: #fca311;
 }
-.nav-container {
+
+.nav-bg-color {
+    background-color: #e5e5e5;
+}
+
+/* .nav-container {
     width: 50px;
     height: 2.3rem;
 }
@@ -58,16 +63,8 @@
     border-color: red;
     font-size: 2.6rem;
     animation: border-blink 400ms infinite reverse linear;
-}
+} */
 
-.main-container {
-    background-color: #1A1A1D;
-}
-
-.title-font {
-    font-family: 'Roboto Slab', serif;
-    color: #C3073F;
-}
 
 .text-font-upper {
     font-family: 'Roboto Slab', serif;
@@ -75,38 +72,38 @@
 
 .text-font-middle {
     font-family: 'Roboto Slab', serif;
-    border-right: 5px solid #C3073F;
-    width: 0rem;
+    border-right: 5px solid #fca311;
+    max-width: 0%;
     overflow: hidden;
     white-space:nowrap;
     animation: border-blink 500ms 15 normal forwards,
-               typewriter 2s 3s steps(50) normal forwards;
+               typewriter 2s 3s steps(50) forwards;
 } 
 
 @keyframes typewriter {
-    from {width: 0rem;}
-    to {width: 20rem;}
+    from {max-width: 0%;}
+    to {max-width: 90%;}
 }
 
 @keyframes border-blink {
-    from {border-color: #C3073F;}
+    from {border-color: #fca311;}
     to {border-color: transparent;}
 }
 
-.short-animation::before {
+.short-animation {
     font-family: 'Roboto Slab', serif;
-    color: white;
 }
 
-.short-animation::after {
+.short-animation::before {
     content: attr(data-letters);
     font-family: 'Roboto Slab', serif;
-    color: #C3073F;
+    color: #fca311;
     position: absolute;
     white-space: nowrap;
     overflow: hidden;
     width: 0%;
-    animation: short-anim 0.3s 7s linear forwards;
+    -webkit-text-stroke: 1px #fca311;
+    animation: short-anim 1s 7s linear forwards;
 }
 
 @keyframes short-anim {
@@ -114,13 +111,43 @@
     to {width: 15%;}
 }
 
-.text-button {
+.expertise-animation {
     font-family: 'Roboto Slab', serif;
+    color: #14213d;
 }
 
-.about-me-button {
+.expertise-animation::before {
+    content: attr(data-letters);
+    font-family: 'Roboto Slab', serif;
+    color: #fca311;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 0%;
+    -webkit-text-stroke: 1px #fca311;
+    animation: exp-anim 1s 8s linear forwards;
+}
+
+@keyframes exp-anim {
+    from {height: 0%;}
+    to {height: 5%;}
+}
+
+.about-me-button, .download-button {
     font-family: 'Roboto Slab', serif;
     padding: 0.4rem 3.9rem;
+    background-color: transparent;
+    border: none;
+    color: #fca311;
+    border: 1px solid #fca311;
+}
+
+.download-button {
+    font-family: 'Roboto Slab', serif;
+    padding: 0.4rem 3.9rem;
+    background-color: #fca311;
+    border: none;
+    color: black;
 }
 
 .main-color-content {
@@ -168,4 +195,10 @@
 
 .footer-container {
     background-color: #000000;
+}
+
+@media screen and (min-width: 768px) {
+    .main-color-content {
+        padding: 11vh 0;
+    }
 }
