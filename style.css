@@ -93,12 +93,16 @@
     to {border-color: transparent;}
 }
 
+.short-animation::before {
+    font-family: 'Roboto Slab', serif;
+    color: white;
+}
+
 .short-animation::after {
     content: attr(data-letters);
     font-family: 'Roboto Slab', serif;
     color: #C3073F;
     position: absolute;
-    left: 0.75rem;
     white-space: nowrap;
     overflow: hidden;
     width: 0%;
