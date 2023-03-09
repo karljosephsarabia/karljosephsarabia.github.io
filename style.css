@@ -10,6 +10,10 @@
     background-color: #e5e5e5;
 }
 
+.navbar-logo {
+    width: 15vw;
+}
+
 /* .nav-container {
     width: 50px;
     height: 2.3rem;
@@ -114,6 +118,7 @@
 .expertise-animation {
     font-family: 'Roboto Slab', serif;
     color: #14213d;
+    font-size: 1.5rem;
 }
 
 .expertise-animation::before {
@@ -130,7 +135,7 @@
 
 @keyframes exp-anim {
     from {height: 0%;}
-    to {height: 5%;}
+    to {height: 10%;}
 }
 
 .about-me-button, .download-button {
@@ -154,6 +159,11 @@
     background-color:#14213d;
 }
 
+.index-main-height-adj{
+    height: 82vh;
+}
+
+
 .about-title-color {
     font-family: 'Roboto Slab', serif;
     letter-spacing: 0.8rem;
@@ -162,6 +172,16 @@
 .about-title-color-adj {
     font-family: 'Roboto Slab', serif;
     letter-spacing: 0.5rem;
+}
+
+.card-custom {
+    background: rgba(99%, 64%, 7%, 0.1);
+    border: 1px solid rgba(99%, 64%, 7%, 0.4);
+    box-shadow: 0 0 10px 1px #fca311;
+}
+
+.card-alignment-1, .card-alignment-2, .card-alignment-3, .card-alignment-4 {
+    justify-content: center;
 }
 
 .card-color {
@@ -186,26 +206,119 @@
 
 .send-button {
     margin: 1.5rem 6rem 1.5rem 6rem;
-    color: black;
+    background-color: #fca311;
 }
 
 .letter-spacing {
     letter-spacing: 0.2rem;
 }
 
+.contact-title {
+    font-size: 2rem;
+    text-align: center;
+    margin: auto;
+    letter-spacing: 1rem;
+    font-family: monospace;
+    width: 15rem;
+}
+
+.contact-text {
+    text-align: justify;
+    width: 22rem;
+    margin: auto;
+}
+
+.message-container {
+    background: rgba(99%, 64%, 7%, 0.3);
+    padding-top: 1.5rem;
+    width: 22rem;
+    border: 1px solid rgba(99%, 64%, 7%, 0.5);
+}
+
+.contact-info, .footer-menu {
+    display: none;
+}
+
 .footer-container {
     background-color: #000000;
 }
 
+.footer-logo {
+    width: 88px
+}
+
+.social-link {
+    width: 280px;
+}
+
 @media screen and (min-width: 768px) {
+    .navbar-logo {
+        width: 6vw;
+    }
+
+    .expertise-animation {
+        font-size: 2rem;
+    }
+   
+    .index-main-height-adj{
+        height: 72vh;
+    }
+
     .main-color-content {
         padding: 11vh 0;
+    }
+
+    .about-content-width {
+        width: 40rem;
+    }
+
+    .card-alignment-1, .card-alignment-3 {
+        justify-content: end;
+    }
+
+    .card-alignment-2, .card-alignment-4 {
+        justify-content: start;
+    }
+
+    .contact-title {
+        font-size: 4rem;
+        text-align: center;
+        letter-spacing: 1rem;
+        font-family: monospace;
+        width: 20rem;
+    }
+
+    .contact-text {
+        text-align: justify;
+        width: 20rem;
+        margin: auto;
+    }
+
+    .contact-info {
+        display: block;
+    }
+
+    .footer-menu {
+        display: flex;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    .main-color-content {
-        padding: 13.5vh 0;
+
+    .navbar-logo {
+        width: 6vw;
+    }
+
+    .index-main-height-adj{
+        height: 79vh;
+    }
+
+    .expertise-animation {
+        font-size: 2.5rem;
+    }
+
+    .contact-main-height-adj {
+        padding: 2.5vh 0;
     }
 
     .navbar-gap {
@@ -213,6 +326,36 @@
     }
 
     .about-content-width {
-        width: 30rem;
+        width: 40rem;
     }
+
+    .card-alignment-1 {
+        justify-content: end;
+    }
+
+    .card-alignment-2, .card-alignment-4 {
+        justify-content: center;
+    }
+
+    .card-alignment-3 {
+        justify-content: start;
+    }
+
+    .contact-text {
+        width: 25rem;
+    }
+
+    .width-adjustment {
+        width:28rem;
+    }
+
+    .message-container {
+        width: 33rem;
+    }
+
+    .contact-info {
+        display: block;
+    }
+    
+
 }
