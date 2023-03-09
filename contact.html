@@ -57,47 +57,62 @@
             </nav>
         </div>
     </header>
-    <main class="main-color-content">
-        <div class="container-lg">
-            <div class="row">
-                <form class="col-12 pt-4 d-flex flex-column justify-content-center">
-                    <h5 class="pb-2 fs-1">Get in Touch</h5>
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control bg-transparent text-white pb-0 border-0 border-bottom rounded-0 border-white no-outline" id="name" placeholder="Name" required>
-                        <label for="name" class="pb-2 d-flex align-items-end">Name</label>
-                    </div>
-                    <div class="form-floating">
-                        <input type="email" class="form-control bg-transparent text-white pb-0 border-0 border-bottom rounded-0 border-white no-outline" id="email-address" placeholder="Email Address"
-                            required>
-                        <label for="email-address" class="pb-2 d-flex align-items-end">Email Address</label>
-                    </div>
-                    <div class="form-floating mt-2">
-                        <textarea class="form-control bg-transparent text-white pb-0 border-0 border-bottom rounded-0 border-white no-outline" placeholder="Leave a message" id="floatingTextarea"
-                            style="height: 10rem;" required></textarea>
-                        <label for="floatingTextarea">Leave a message</label>
-                    </div>
-                    <button class="btn btn-warning send-button" type="submit">Send a message</button>
-                </form>
+    <main class="main-color-content contact-main-height-adj">
+        <div class="container-lg text-center">
+            <div class="row d-flex justify-content-center py-5">
+                <div class="col-12 col-md-6 col-lg-6 width-adjustment">
+                    <h1 class="contact-title mb-3">Get in Touch</h1>
+                    <p class="text-white contact-text mb-4">If you have questions or would like to connect, please don't
+                        hesitate to reach out. You can find my contact information below. I look forward to hearing from
+                        you!</p>
+                    <div class="text-start contact-info">
+                        <div>
+                            <h5 class="letter-spacing"><i class="fa-solid fa-location-dot"></i> Home Address</h5>
+                            <p class="text-white ps-4">Calamba City, Philippines 4027</p>
+                        </div>
 
-                <div class="col-12 pb-4">
-                    <p class="pb-2">If you have questions or would like to connect, please don't hesitate to reach out. You can find my contact information below. I look forward to hearing from you!</p>
+                        <div>
+                            <h5 class="letter-spacing"><i class="fa-solid fa-phone"></i></i> Phone</h5>
+                            <p class="text-white ps-4">0915-123-456</p>
+                        </div>
 
-                    <div>
-                        <h5 class="letter-spacing"><i class="fa-solid fa-location-dot"></i> Home Address</h5>
-                        <p class="text-white ps-4">Calamba City, Philippines 4027</p>
-                    </div>
-
-                    <div>
-                        <h5 class="letter-spacing"><i class="fa-solid fa-phone"></i></i> Phone</h5>
-                        <p class="text-white ps-4">0915-123-456</p>
-                    </div>
-
-                    <div>
-                        <h5 class="letter-spacing"><i class="fa-solid fa-envelope-open"></i> Email</h5>
-                        <p class="text-white ps-4">sarabia.karljoseph@gmail.com</p>
+                        <div>
+                            <h5 class="letter-spacing"><i class="fa-solid fa-envelope-open"></i> Email</h5>
+                            <p class="text-white ps-4">sarabia.karljoseph@gmail.com</p>
+                        </div>
                     </div>
                 </div>
+
+                <div class="col-12 col-md-6 col-lg-6 d-flex justify-content-center">
+                    <form class="message-container mb-3 rounded-1">
+                        <h5 class="text-center">Leave a message</h5>
+                        <div class="form-floating mb-3">
+                            <input type="text"
+                                class="form-control bg-transparent text-white pb-0 border-0 border-bottom rounded-0 border-white no-outline"
+                                id="name" placeholder="Name" required>
+                            <label for="name" class="pb-2 d-flex align-items-end text-white">Name</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="email"
+                                class="form-control bg-transparent text-white pb-0 border-0 border-bottom rounded-0 border-white no-outline"
+                                id="email-address" placeholder="Email Address" required>
+                            <label for="email-address" class="pb-2 d-flex align-items-end text-white">Email
+                                Address</label>
+                        </div>
+                        <div class="form-floating mt-2">
+                            <textarea
+                                class="form-control bg-transparent text-white pb-0 border-0 border-bottom rounded-0 border-white no-outline"
+                                placeholder="Leave a message" id="floatingTextarea" style="height: 10rem;"
+                                required></textarea>
+                            <label for="floatingTextarea" class="text-white">Message</label>
+                        </div>
+                        <button class="btn send-button text-dark" type="submit">Send a message</button>
+                    </form>
+                </div>
+
+
             </div>
+        </div>
         </div>
     </main>
     <footer class="footer-container border-top border-3">
