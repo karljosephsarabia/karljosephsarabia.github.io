@@ -70,7 +70,7 @@
 } */
 
 
-.text-font-upper {
+.text-font-upper, .short-animation, .project-main-title, .project-main-textnav-style {
     font-family: 'Roboto Slab', serif;
 }
 
@@ -155,7 +155,7 @@
     color: black;
 }
 
-.main-color-content {
+body {
     background-color:#14213d;
 }
 
@@ -174,7 +174,7 @@
     letter-spacing: 0.5rem;
 }
 
-.card-custom {
+.card-custom, .project-card-style {
     background: rgba(99%, 64%, 7%, 0.1);
     border: 1px solid rgba(99%, 64%, 7%, 0.4);
     box-shadow: 0 0 10px 1px #fca311;
@@ -209,8 +209,9 @@
     background-color: #fca311;
 }
 
-.letter-spacing {
+.contact-main-title {
     letter-spacing: 0.2rem;
+    font-family: 'Roboto Slab', serif;
 }
 
 .contact-title {
@@ -218,7 +219,7 @@
     text-align: center;
     margin: auto;
     letter-spacing: 1rem;
-    font-family: monospace;
+    font-family: 'Roboto Slab', serif;
     width: 15rem;
 }
 
@@ -226,6 +227,25 @@
     text-align: justify;
     width: 22rem;
     margin: auto;
+}
+
+.project-main-textnav-style {
+    color: #fca311;
+    background-color: #14213d;
+}
+
+.project-main-card {
+    background: rgba(99%, 64%, 7%, 0.3);
+    border: 1px solid rgba(99%, 64%, 7%, 1);
+}
+
+.project-card-alignment {
+    justify-content: center;
+}
+
+.project-main-card-hover {
+    background: rgba(0, 0, 0, 0.8);
+    height: 3rem;
 }
 
 .message-container {
@@ -280,11 +300,15 @@
         justify-content: start;
     }
 
+    .project-card-alignment {
+        justify-content: left;
+    }
+
     .contact-title {
         font-size: 4rem;
         text-align: center;
         letter-spacing: 1rem;
-        font-family: monospace;
+        font-family: 'Roboto Slab', serif;
         width: 20rem;
     }
 
@@ -339,6 +363,10 @@
 
     .card-alignment-3 {
         justify-content: start;
+    }
+
+    .project-card-alignment {
+        justify-content: left;
     }
 
     .contact-text {
