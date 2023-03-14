@@ -284,15 +284,9 @@ body {
     margin: auto;
 }
 
-/* .project-main-textnav-style:visited {
-    color: white;
-    background-color: #fca311
-} */
-
-/* .project-main-card {
-    background: rgba(99%, 64%, 7%, 0.3);
-    border: 1px solid rgba(99%, 64%, 7%, 1);
-} */
+.contact-info {
+    width: 22rem;
+}
 
 .message-container {
     background: rgba(20, 33, 61, 0.9);
@@ -363,10 +357,6 @@ body {
     .navbar-gap {
         gap: 7rem;
     }
-   
-    /* .index-main-height-adj{
-        height: 72vh;
-    } */
 
     .about-content-width {
         width: 40rem;
@@ -403,7 +393,7 @@ body {
     }
 
     .contact-info {
-        margin: 0 22px;
+        width: 22rem;
     }
 
     .social-link-gap {
@@ -471,6 +461,10 @@ body {
 
     .contact-text {
         width: 25rem;
+    }
+
+    .contact-info {
+        width: 400px;
     }
 
     .width-adjustment {
