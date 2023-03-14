@@ -119,11 +119,20 @@
 
 .about-me-button {
     font-family: 'Roboto Slab', serif;
-    padding: 0.4rem 3.9rem;
+    padding: 0.4rem 0;
     background-color: transparent;
-    border: none;
-    color: #fca311;
+    color: white;
+    width: 12.5rem;
     border: 1px solid #fca311;
+    box-shadow: 0 0 10px #fca311;
+    letter-spacing: 3px;
+    animation: about-button-anim 2s linear infinite;
+}
+
+@keyframes about-button-anim {
+    0% {color: white; text-shadow: none; box-shadow: none;}
+    50% {color: #fca311; text-shadow: 0 0 15px #fca311; box-shadow: 0 0 10px #fca311, 0 0 20px #fca311, 0 0 40px #fca311;}
+    100% {color: white; text-shadow: none; box-shadow: none;}
 }
 
 .download-button {
