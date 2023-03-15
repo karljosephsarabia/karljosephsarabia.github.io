@@ -85,7 +85,7 @@
     overflow: hidden;
     width: 0%;
     -webkit-text-stroke: 1px #fca311;
-    animation: short-anim 1s 4s linear forwards;
+    animation: short-anim 1s 4.5s linear forwards;
 }
 
 @keyframes short-anim {
@@ -389,7 +389,7 @@ body {
         opacity: 0%;
         transform: translateX(-300px);
         z-index: -1;
-        animation: profile-anim 2s 4.5s forwards;
+        animation: profile-anim 2s 3.3s forwards;
     }
 
     @keyframes profile-anim {
