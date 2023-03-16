@@ -376,6 +376,10 @@ body {
         transform: scale(1.2);
     }
 
+    .link-menu {
+        transition: 0.5s;
+    }
+
     .nav-item:hover > .link-menu {
         transform: scale(1.2);
     }
