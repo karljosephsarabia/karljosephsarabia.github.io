@@ -47,25 +47,25 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto navbar-gap">
                             <li class="nav-item">
-                                <hr class="mb-0 menu-line-top-active">
+                                <hr class="mb-0 menu-line-top-active line-top" id="line-top-Home">
                                 <a class="nav-link active link-active" aria-current="page"
-                                    onclick="pageClick('home')">Home</a>
-                                <hr class="mt-0 menu-line-bottom-active">
+                                    onclick="pageClick('Home')">Home</a>
+                                <hr class="mt-0 menu-line-bottom-active line-bottom" id="line-bottom-Home">
                             </li>
                             <li class="nav-item">
-                                <hr class="mb-0 menu-line-top">
-                                <a class="nav-link link-menu" onclick="pageClick('about')">About</a>
-                                <hr class="mt-0 menu-line-bottom">
+                                <hr class="mb-0 menu-line-top line-top" id="line-top-About">
+                                <a class="nav-link link-menu" onclick="pageClick('About')">About</a>
+                                <hr class="mt-0 menu-line-bottom line-bottom" id="line-bottom-About">
                             </li>
                             <li class="nav-item">
-                                <hr class="mb-0 menu-line-top">
-                                <a class="nav-link link-menu" onclick="pageClick('project')">Project</a>
-                                <hr class="mt-0 menu-line-bottom">
+                                <hr class="mb-0 menu-line-top line-top" id="line-top-Project">
+                                <a class="nav-link link-menu" onclick="pageClick('Project')">Project</a>
+                                <hr class="mt-0 menu-line-bottom line-bottom" id="line-bottom-Project">
                             </li>
                             <li class="nav-item">
-                                <hr class="mb-0 menu-line-top">
-                                <a class="nav-link link-menu" onclick="pageClick('contact')">Contact</a>
-                                <hr class="mt-0 menu-line-bottom">
+                                <hr class="mb-0 menu-line-top line-top" id="line-top-Contact">
+                                <a class="nav-link link-menu" onclick="pageClick('Contact')">Contact</a>
+                                <hr class="mt-0 menu-line-bottom line-bottom" id="line-bottom-Contact">
                             </li>
                         </ul>
                     </div>
@@ -74,7 +74,7 @@
         </div>
     </header>
     <main>
-        <div class="container-lg page" id="home">
+        <div class="container-lg page" id="Home">
             <div class="row d-flex justify-content-center">
                 <div class="col-12 col-md-6 col-lg-6 mb-4 mt-5 d-flex justify-content-center flex-column">
                     <h1 class="text-white text-font-upper mb-3">Hi There!</h1>
@@ -96,7 +96,7 @@
             </div>
         </div>
 
-        <div class="container-lg py-5 page hidden" id="about">
+        <div class="container-lg py-5 page hidden" id="About">
             <div class="row">
                 <div class="col-12 text-center">
                     <h1 class="fs-4 about-title-color"><i class="fa-solid fa-user fa-xs"></i>ABOUT</h1>
@@ -262,7 +262,7 @@
             </div>
         </div>
 
-        <div class="container-lg page hidden" id="project">
+        <div class="container-lg page hidden" id="Project">
             <div class="row my-5">
                 <div class="col-12 mb-4 d-flex justify-content-center">
                     <h1 class="project-main-title">PORTFOLIO</h1>
@@ -409,7 +409,7 @@
             </div>
         </div>
 
-        <div class="container-lg text-center my-4 page hidden" id="contact">
+        <div class="container-lg text-center my-4 page hidden" id="Contact">
             <div class="row d-flex justify-content-center">
                 <div class="col-12 col-md-6 col-lg-6 width-adjustment mb-4">
                     <h1 class="contact-title mb-3">Get in Touch</h1>
@@ -510,8 +510,8 @@
         crossorigin="anonymous"></script>
 
     <script>
-        window.history.replaceState({ page: 'home' }, 'home', 'home');
-        console.log(window.history)
+        window.history.replaceState({page: 'home'}, 'home', 'home')
+
 
         function pageClick(event) {
             window.history.pushState({ page: event }, event, `${event}`);
@@ -519,23 +519,56 @@
             updatePages(event);
         }
 
-         
+
         function updatePages(pages) {
             const page = document.getElementsByClassName('page');
+            const headerLink = document.querySelectorAll('.collapse a');
+
+            console.log(headerLink[0].textContent);
 
             for (let x of page) {
                 x.classList.add('hidden');
-                console.log(x)
+                console.log(x);
             }
 
             const currentPages = document.getElementById(pages);
             currentPages.classList.remove('hidden');
+
+            const lineTop = document.getElementsByClassName('line-top');
+            const lineBottom = document.getElementsByClassName('line-bottom');
+     
+            for (let y of lineTop) {
+                for (let z of y.classList) {
+                    if (z === 'menu-line-top-active') {
+                        y.classList.remove('menu-line-top-active');
+                        y.classList.add('menu-line-top');
+                    }
+                }
+            }
+
+            for (let y of lineBottom) {
+                for (let z of y.classList) {
+                    if (z === 'menu-line-bottom-active') {
+                        y.classList.remove('menu-line-bottom-active');
+                        y.classList.add('menu-line-bottom');
+                    }
+                }
+            }
+
+            const currentLineTop = document.getElementById(`line-top-${pages}`);
+            currentLineTop.classList.remove('menu-line-top');
+            currentLineTop.classList.add('menu-line-top-active');
+
+            const currentLineBottom = document.getElementById(`line-bottom-${pages}`);
+            currentLineBottom.classList.remove('menu-line-bottom');
+            currentLineBottom.classList.add('menu-line-bottom-active');
+
         }
 
-        window.addEventListener('popstate', function(browserButton) {
+        window.addEventListener('popstate', function (browserButton) {
             if (browserButton.state) {
-                console.log(browserButton.state)
-                updatePages(browserButton.state.page)
+                console.log(browserButton.state);
+                updatePages(browserButton.state.page);
             }
         })
 
