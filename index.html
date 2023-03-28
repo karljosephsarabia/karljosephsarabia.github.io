@@ -510,11 +510,11 @@
         crossorigin="anonymous"></script>
 
     <script>
-        window.history.replaceState({page: 'home'}, 'home', 'home')
+        window.history.replaceState({page: 'Home'}, 'Home', '#Home')
 
 
         function pageClick(event) {
-            window.history.pushState({ page: event }, event, `${event}`);
+            window.history.pushState({ page: event }, event, `#${event}`);
             console.log(window.history);
             updatePages(event);
         }
